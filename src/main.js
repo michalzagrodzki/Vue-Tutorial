@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Home from './components/Home.vue'
+import TimeEntries from './components/TimeEntries.vue'
 
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -17,11 +18,12 @@ const router = new VueRouter({
     { path: '/',
       component: App,
       children: [
-        { path: '', component: Home }
+        { path: '', component: Home },
+        { path: '/home', component: Home },
+        { path: '/time-entries', component: TimeEntries }
       ]
     },
-    { path: '/home', component: Home },
-    { path: '*', component: Home }
+    { path: '*', component: App }
   ]
 })
 
