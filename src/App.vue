@@ -1,7 +1,7 @@
 <template>
 
   <div id="wrapper">
-    <nav class="navbar navar-default">
+    <nav class="navbar navbar-default">
       <div class="container">
         <a class="navbar-brand" href="#">
           <i class="glyphicon glyphicon-time"></i>
