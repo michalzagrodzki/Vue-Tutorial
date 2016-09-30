@@ -1,6 +1,7 @@
-# vue-time-tracker
+# Vue Tutorial
 
 > Tutorial from scotch.io on Vue
+> Link to tutorial: https://scotch.io/tutorials/build-a-single-page-time-tracking-app-with-vue-js-part-ii
 
 ## Build Setup
 
@@ -13,15 +14,6 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
