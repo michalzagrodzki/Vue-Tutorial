@@ -1,6 +1,7 @@
 # Vue Tutorial
 
 > Tutorial from scotch.io on Vue
+
 > Link to tutorial: https://scotch.io/tutorials/build-a-single-page-time-tracking-app-with-vue-js-part-ii
 
 ## Build Setup
