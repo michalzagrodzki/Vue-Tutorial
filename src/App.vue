@@ -30,6 +30,8 @@ export default {
     Hello
   }
 }
+
+console.log('app loaded')
 </script>
 
 <style>
