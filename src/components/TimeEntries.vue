@@ -90,6 +90,12 @@
           this.$dispatch('deleteTime', timeEntry)
         }
       }
+    },
+    events: {
+      timeUpdate (timeEntry) {
+        this.timeEntries.push(timeEntry)
+        return true
+      }
     }
   }
 
