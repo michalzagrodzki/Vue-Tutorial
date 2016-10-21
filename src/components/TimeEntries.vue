@@ -1,29 +1,24 @@
 <template>
   <div>
-    <button
-    v-if="$route.path !== '/time-entries/log-time'"
-    router-link="'/time-entries/log-time'"
-    class="btn btn-primary"
-    >
+    <button v-if="$route.path !== '/time-entries/log-time'"
+            router-link="'/time-entries/log-time'"
+            class="btn btn-primary">
       Log Time
     </button>
-
     <div v-if="$route.path === '/time-entries/log-time'">
       <h3>Log Time</h3>
     </div>
-
     <hr />
-
     <router-view></router-view>
-
     <div>
-      <p v-if="!timeEntries.length"><strong>No time entries yet</strong></p>
+      <p v-if="!timeEntries.length">
+        <strong>No time entries yet</strong>
+      </p>
       <div class="list-group">
-
         <a v-for="timeEntry in timeEntries" class="list-group-item">
           <div class="row">
             <div class="col-sm-2 user-details">
-              <img src="timeEntry.user.image" class="avatar img-circle img-responsive"/>
+              <img src="timeEntry.user.image" class="avatar img-circle img-responsive" />
               <p>
                 <strong>
                   {{ timeEntry.user.firstName }}
@@ -31,7 +26,6 @@
                 </strong>
               </p>
             </div>
-
             <div>
               <h3>
                 {{ timeEntry.totalTime }} hours
@@ -40,28 +34,21 @@
                 {{ timeEntry.date }}
               </p>
             </div>
-
             <div>
               <p>
                 {{ timeEntry.comment }}
               </p>
             </div>
-
             <div>
-              <button
-                @click="deleteTimeEntry(timeEntry)">
+              <button @click="deleteTimeEntry(timeEntry)">
                 x
               </button>
             </div>
 
-
           </div>
         </a>
-
       </div>
-
     </div>
-
   </div>
 </template>
 <script>
@@ -100,4 +87,3 @@
   }
 
 </script>
-
