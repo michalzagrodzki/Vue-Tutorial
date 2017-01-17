@@ -18,8 +18,8 @@ const router = new VueRouter({
       component: App,
       children: [
         { path: '', component: Home },
-        { path: '/home', component: Home },
-        { path: '/time-entries', component: TimeEntries }
+        { path: '/home', name: 'home', component: Home },
+        { path: '/time-entries', name: 'timeentries', component: TimeEntries }
       ]
     },
     { path: '*', component: App }
