@@ -6,8 +6,7 @@ import TimeEntries from './components/TimeEntries.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 
-// We want to apply VueResource and VueRouter
-// to our Vue instance
+// Add Vue-resource and Vue-router to Vue
 Vue.use(VueResource)
 Vue.use(VueRouter)
 
