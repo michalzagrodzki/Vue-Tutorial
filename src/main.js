@@ -19,7 +19,14 @@ const router = new VueRouter({
       children: [
         { path: '', component: Home },
         { path: '/home', name: 'home', component: Home },
-        { path: '/time-entries', name: 'timeentries', component: TimeEntries }
+        { path: '/time-entries',
+          name: 'timeentries',
+          component: TimeEntries,
+          children:
+          [
+            { path: '/log-time', name: 'logtime', component: LogTime }
+          ]
+        }
       ]
     },
     { path: '*', component: App }
