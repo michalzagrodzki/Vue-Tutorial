@@ -1,9 +1,10 @@
 <template>
   <div>
     <button v-if="$route.path !== '/time-entries/log-time'"
-            router-link="'/time-entries/log-time'"
             class="btn btn-primary">
-      Log Time
+      <router-link :to="{ name: 'logtime' }">
+        Log Time
+      </router-link>
     </button>
     <div v-if="$route.path === '/time-entries/log-time'">
       <h3>Log Time</h3>
