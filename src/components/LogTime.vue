@@ -17,11 +17,11 @@
       </div>
     </div>
     <button v-on:click="save()" class="btn btn-primary">Save</button>
-    <button class="btn btn-danger">
-      <router-link :to="{ name: 'timeentries' }">
+    <router-link :to="{ name: 'timeentries' }">
+      <button class="btn btn-danger">
         Cancel
-      </router-link> 
-    </button>
+      </button>
+    </router-link> 
   </div>
 </template>
 <script>
