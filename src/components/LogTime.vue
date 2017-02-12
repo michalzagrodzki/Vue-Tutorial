@@ -21,7 +21,8 @@
       <button class="btn btn-danger">
         Cancel
       </button>
-    </router-link> 
+    </router-link>
+    <hr>
   </div>
 </template>
 <script>
