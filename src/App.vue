@@ -17,7 +17,7 @@
     <div class="container">
 
       <div class="col-sm-3">
-
+        <sidebar :time="totalTime"></sidebar>
       </div>
 
       <div class="col-sm-9">
