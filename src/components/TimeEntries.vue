@@ -61,10 +61,7 @@
   </div>
 </template>
 <script>
-  import Sidebar from './components/Sidebar.vue'
-
   export default {
-    components: { 'sidebar': Sidebar },
     data () {
       let existingEntry = {
         user: {
@@ -95,12 +92,7 @@
 
       timeUpdate (timeEntry) {
         this.timeEntries.push(timeEntry)
-        this.totalTime += parseFloat(timeEntry.totalTime)
         return true
-      },
-
-      deleteTime (timeEntry) {
-        this.totalTime -= parseFloat(timeEntry.totalTime)
       }
     }
   }
