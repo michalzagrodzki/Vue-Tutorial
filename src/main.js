@@ -6,10 +6,12 @@ import LogTime from './components/LogTime.vue'
 
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import VueBus from 'vue-bus'
 
 // Add Vue-resource and Vue-router to Vue
 Vue.use(VueResource)
 Vue.use(VueRouter)
+Vue.use(VueBus)
 
 const router = new VueRouter({
   mode: 'history',
