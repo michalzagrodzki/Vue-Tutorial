@@ -45,7 +45,14 @@
         console.log('function save triggered')
         let timeEntry = this.timeEntry
         this.$bus.emit('save', timeEntry)
-        this.timeEntry = {}
+        this.timeEntry = {
+          user: {
+            firstname: 'Bob',
+            lastname: 'Coder',
+            email: 'bobcoder@outlook.com',
+            image: 'https://1.gravatar.com/avatar/7f4ec37467f2f7db6fffc7b4d2cc8dc2?s=250&d=retro&r=g'
+          }
+        }
       }
     }
   }
