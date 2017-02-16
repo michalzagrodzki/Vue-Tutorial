@@ -42,7 +42,7 @@
     methods: {
       save () {
         let timeEntry = this.timeEntry
-        this.$dispatch('timeUpdate', timeEntry)
+        this.$bus.emit('timeUpdate', timeEntry)
         this.timeEntry = {}
       }
     }

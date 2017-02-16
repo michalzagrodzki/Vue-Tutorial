@@ -79,6 +79,9 @@
         totalTime: 1.5
       }
     },
+    created () {
+      this.$bus.on('save', this.timeUpdate)
+    },
     methods: {
       deleteTimeEntry (timeEntry) {
         let index = this.timeEntries.indexOf(timeEntry)
@@ -89,7 +92,6 @@
       }
     },
     events: {
-
       timeUpdate (timeEntry) {
         this.timeEntries.push(timeEntry)
         return true
