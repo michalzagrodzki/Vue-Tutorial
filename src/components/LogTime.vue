@@ -42,8 +42,9 @@
     },
     methods: {
       save () {
+        console.log('function save triggered')
         let timeEntry = this.timeEntry
-        this.$bus.emit('timeUpdate', timeEntry)
+        this.$bus.emit('save', timeEntry)
         this.timeEntry = {}
       }
     }

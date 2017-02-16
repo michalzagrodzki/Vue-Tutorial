@@ -83,6 +83,9 @@
     created () {
       this.$bus.on('save', this.timeUpdate)
     },
+    beforeDestroy () {
+      this.$bus.off('save', this.timeUpdate)
+    },
     methods: {
       deleteTimeEntry (timeEntry) {
         let index = this.timeEntries.indexOf(timeEntry)
@@ -90,14 +93,14 @@
           this.timeEntries.splice(index, 1)
           this.$dispatch('deleteTime', timeEntry)
         }
-      }
-    },
-    events: {
+      },
       timeUpdate (timeEntry) {
+        console.log('timeUpdate fired')
         this.timeEntries.push(timeEntry)
         return true
       }
-    }
+    },
+    events: { }
   }
 
 </script>
