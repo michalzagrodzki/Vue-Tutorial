@@ -34,6 +34,7 @@
   import Sidebar from './components/Sidebar.vue'
 
   export default {
+    name: 'Vue-Time-Tracker',
     components: { 'sidebar': Sidebar },
     data () {
       return {

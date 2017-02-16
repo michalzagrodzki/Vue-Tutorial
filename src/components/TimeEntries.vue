@@ -62,6 +62,7 @@
 </template>
 <script>
   export default {
+    name: 'Time-Entries',
     data () {
       let existingEntry = {
         user: {

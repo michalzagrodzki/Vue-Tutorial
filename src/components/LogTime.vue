@@ -27,6 +27,7 @@
 </template>
 <script>
   export default {
+    name: 'Log-Time',
     data () {
       return {
         timeEntry: {
