@@ -41,6 +41,12 @@
         totalTime: 1.5
       }
     },
+    created () {
+      this.$bus.on('deleteTime', this.timeEntry)
+    },
+    beforeDestroy () {
+      this.$bus.off('deleteTime', this.timeEntry)
+    },
     events: {
       timeUpdate (timeEntry) {
         this.totalTime += parseFloat(timeEntry.totalTime)

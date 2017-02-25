@@ -91,7 +91,7 @@
         let index = this.timeEntries.indexOf(timeEntry)
         if (window.confirm('Are you sure you want to delete this time entry?')) {
           this.timeEntries.splice(index, 1)
-          this.$dispatch('deleteTime', timeEntry)
+          this.$bus.emit('deleteTime', timeEntry)
         }
       },
       timeUpdate (timeEntry) {
