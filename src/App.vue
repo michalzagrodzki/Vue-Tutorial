@@ -42,18 +42,19 @@
       }
     },
     created () {
-      this.$bus.on('deleteTime', this.timeEntry)
+      this.$bus.on('deleteTime', this.deleteTime)
+      this.$bus.on('timeUpdate', this.timeUpdate)
     },
     beforeDestroy () {
-      this.$bus.off('deleteTime', this.timeEntry)
+      this.$bus.off('deleteTime', this.deleteTime)
+      this.$bus.off('timeUpdate', this.timeUpdate)
     },
-    events: {
+    methods: {
       timeUpdate (timeEntry) {
         console.log('timeUpdate from App')
         console.log(timeEntry)
         this.totalTime += parseFloat(timeEntry.totalTime)
       },
-
       deleteTime (timeEntry) {
         this.totalTime -= parseFloat(timeEntry.totalTime)
       }

@@ -93,12 +93,13 @@
         let index = this.timeEntries.indexOf(timeEntry)
         if (window.confirm('Are you sure you want to delete this time entry?')) {
           this.timeEntries.splice(index, 1)
-          // this.$bus.emit('deleteTime', timeEntry)
+          this.$bus.emit('deleteTime', timeEntry)
         }
       },
       timeUpdate (timeEntry) {
         console.log('timeUpdate from TimeEntries fired')
         this.timeEntries.push(timeEntry)
+        this.$bus.emit('timeUpdate', timeEntry)
         return true
       }
     },
