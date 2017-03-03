@@ -38,7 +38,7 @@
     components: { 'sidebar': Sidebar },
     data () {
       return {
-        totalTime: 1.5
+        totalTime: 14
       }
     },
     created () {
@@ -49,6 +49,8 @@
     },
     events: {
       timeUpdate (timeEntry) {
+        console.log('timeUpdate from App')
+        console.log(timeEntry)
         this.totalTime += parseFloat(timeEntry.totalTime)
       },
 

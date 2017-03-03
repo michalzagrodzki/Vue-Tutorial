@@ -88,14 +88,16 @@
     },
     methods: {
       deleteTimeEntry (timeEntry) {
+        console.log('printing timeEntry that will be deleted')
+        console.log(timeEntry.totalTime)
         let index = this.timeEntries.indexOf(timeEntry)
         if (window.confirm('Are you sure you want to delete this time entry?')) {
           this.timeEntries.splice(index, 1)
-          this.$bus.emit('deleteTime', timeEntry)
+          // this.$bus.emit('deleteTime', timeEntry)
         }
       },
       timeUpdate (timeEntry) {
-        console.log('timeUpdate fired')
+        console.log('timeUpdate from TimeEntries fired')
         this.timeEntries.push(timeEntry)
         return true
       }
