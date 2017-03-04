@@ -36,9 +36,9 @@
   export default {
     name: 'Vue-Time-Tracker',
     components: { 'sidebar': Sidebar },
-    data () {
-      return {
-        totalTime: 14
+    computed: {
+      totalTime: () => {
+        return 14
       }
     },
     created () {
