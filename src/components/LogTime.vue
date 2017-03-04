@@ -13,7 +13,7 @@
     <div class="form-group">
       <div class="col-sm-12">
         <label>Comment</label>
-        <input type="text" v-model="timeEntry.comment" class="form-control" placeholder="Comment"/>
+        <input v-on:keyup.enter="save()" type="text" v-model="timeEntry.comment" class="form-control" placeholder="Comment"/>
       </div>
     </div>
     <button v-on:click="save()" class="btn btn-primary">Save</button>
