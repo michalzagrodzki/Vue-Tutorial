@@ -36,9 +36,9 @@
   export default {
     name: 'Vue-Time-Tracker',
     components: { 'sidebar': Sidebar },
-    computed: {
-      totalTime: () => {
-        return 14
+    data () {
+      return {
+        totalTime: 15
       }
     },
     created () {
@@ -53,6 +53,7 @@
       timeUpdate (timeEntry) {
         console.log('timeUpdate from App')
         console.log(timeEntry)
+        console.log(this.totalTime)
         this.totalTime += parseFloat(timeEntry.totalTime)
       },
       deleteTime (timeEntry) {
