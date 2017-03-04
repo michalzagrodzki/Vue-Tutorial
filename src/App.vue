@@ -51,9 +51,6 @@
     },
     methods: {
       timeUpdate (timeEntry) {
-        console.log('timeUpdate from App')
-        console.log(timeEntry)
-        console.log(this.totalTime)
         this.totalTime += parseFloat(timeEntry.totalTime)
       },
       deleteTime (timeEntry) {
